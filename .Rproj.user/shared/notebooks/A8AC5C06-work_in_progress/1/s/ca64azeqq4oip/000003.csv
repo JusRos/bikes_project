@@ -1,0 +1,13 @@
+"0","```r
+game_sales %>% filter(publisher == \"Nintendo\") %>%  filter(year_of_release == 2006) %>% 
+  filter(platform == \"3DS\") %>% 
+  ggplot(aes(x = factor(year_of_release), fill = genre))+
+  geom_bar(position = \"dodge\", show.legend = FALSE)+
+  labs(
+    x = \"\nGenre\n\",
+    y = \"\nCount\n\"
+  ) + 
+
+  theme(axis.text = element_text(size = 8, face = \"plain\"))
+
+```"

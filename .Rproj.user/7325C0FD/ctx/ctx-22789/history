@@ -1,0 +1,512 @@
+group_by(start_time) %>%
+summarise(avg_hirelength = mean(length_minutes))
+nyc_bikes_df %>% index_by(date) %>% summarise(count = n()) %>%
+ggplot(aes(x = date, y = count))+
+geom_point()+
+geom_smooth()+
+theme(axis.text = element_text(size = 12)) +
+scale_fill_manual(values = colour_scheme) +
+theme_minimal() +
+labs(title = "\nService use by type and gender\n",
+x = "\nMonth\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_df %>% index_by(date) %>% summarise(count = n()) %>%
+ggplot(aes(x = date, y = count))+
+geom_point()+
+geom_smooth()+
+theme(axis.text = element_text(size = 12)) +
+scale_fill_manual(values = colour_scheme) +
+theme_minimal() +
+labs(title = "\nBike hires by date\n",
+x = "\nTime\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_df %>% index_by(month) %>% summarise(count = n()) %>%
+ggplot(aes(x = month, y = count))+
+geom_point(size = 3)+
+geom_line()
+nyc_bikes_df %>% index_by(month) %>% summarise(count = n()) %>%
+ggplot(aes(x = month, y = count))+
+geom_point(size = 3)+
+geom_line()+
+theme(axis.text = element_text(size = 12)) +
+scale_fill_manual(values = colour_scheme) +
+theme_minimal() +
+labs(title = "\nService use by type and gender\n",
+x = "\nMonth\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_df %>% index_by(month) %>% summarise(count = n()) %>%
+ggplot(aes(x = month, y = count))+
+geom_point(size = 3)+
+geom_line()+
+theme(axis.text = element_text(size = 12)) +
+scale_fill_manual(values = colour_scheme) +
+theme_minimal() +
+labs(title = "\nBike HIRES by Monthr\n",
+x = "\nMonth\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_df %>% index_by(month) %>% summarise(count = n()) %>%
+ggplot(aes(x = month, y = count))+
+geom_point(size = 3)+
+geom_line()+
+theme(axis.text = element_text(size = 12)) +
+scale_fill_manual(values = colour_scheme) +
+theme_minimal() +
+labs(title = "\nBike Hires by Month\n",
+x = "\nMonth\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_df %>% index_by(month) %>% summarise(count = n()) %>%
+ggplot(aes(x = month, y = count))+
+geom_point(size = 3)+
+theme(axis.text = element_text(size = 12)) +
+scale_fill_manual(values = colour_scheme) +
+theme_minimal() +
+labs(title = "\nBike Hires by Month\n",
+x = "\nMonth\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+# use spread across the weekdays and by gender
+nyc_bikes_df %>%
+ggplot(aes(x = weekday, fill = gender))+
+geom_bar()+
+theme(axis.text = element_text(size = 12))+
+scale_fill_manual(values = colour_scheme)+
+theme_minimal()+
+labs(
+title = "\nService use by weekday and gender\n",
+x = "\nDay of the week\n",
+y = "\nCount\n"
+)
+nyc_bikes_df %>%
+ggplot()+
+geom_bar(aes(x = month(), fill = type), position = "dodge")+
+theme(axis.text = element_text(size = 12))+
+scale_fill_manual(values = colour_scheme)+
+theme_minimal()+
+labs(
+title = "\nService use by weekday and type\n",
+x = "\nDay of the week\n",
+y = "\nCount\n"
+)
+nyc_bikes_df %>%
+ggplot()+
+geom_bar(aes(x = month, fill = type), position = "dodge")+
+theme(axis.text = element_text(size = 12))+
+scale_fill_manual(values = colour_scheme)+
+theme_minimal()+
+labs(
+title = "\nService use by weekday and type\n",
+x = "\nDay of the week\n",
+y = "\nCount\n"
+)
+nyc_bikes_df %>%
+ggplot()+
+geom_bar(aes(x = month, fill = type))+
+theme(axis.text = element_text(size = 12))+
+scale_fill_manual(values = colour_scheme)+
+theme_minimal()+
+labs(
+title = "\nService use by weekday and type\n",
+x = "\nDay of the week\n",
+y = "\nCount\n"
+)
+nyc_bikes_df %>%
+ggplot()+
+geom_bar(aes(x = weekday, fill = type))+
+theme(axis.text = element_text(size = 12))+
+scale_fill_manual(values = colour_scheme)+
+theme_minimal()+
+labs(
+title = "\nService use by weekday and type\n",
+x = "\nDay of the week\n",
+y = "\nCount\n"
+)
+nyc_bikes_tibble <- as_tibble(nyc_bikes_df)
+nyc_bikes_tibble <- as_tibble(nyc_bikes_df) %>% group_by(start_stations)
+nyc_bikes_tibble <- as_tibble(nyc_bikes_df)
+nyc_bikes_tibble %>% group_by(start_station)
+nyc_bikes_tibble %>% group_by(start_station) %>% summarise(count = n())
+nyc_bikes_tibble <- as_tibble(nyc_bikes_df)
+nyc_bikes_tibble %>% group_by(start_station) %>% summarise(count = n()) %>% arrange(desc(count) %>% head(n = 10)
+nyc_bikes_tibble %>% group_by(start_station) %>% summarise(count = n()) %>% arrange(desc(count)) %>% head(n = 10)
+nyc_bikes_tibble %>% group_by(start_station) %>% summarise(count = n()) %>% arrange(desc(count)) %>% head(n = 10) %>%
+ggplot(aes(x = start_station))+geom_bar()
+nyc_bikes_tibble %>% group_by(start_station) %>% summarise(count = n()) %>% arrange(desc(count)) %>% head(n = 10) %>%
+ggplot(aes(x = start_station, y = count))+
+geom_col()
+nyc_bikes_tibble %>% group_by(start_station) %>% summarise(count = n()) %>% arrange(desc(count)) %>% head(n = 10) %>%
+ggplot(aes(x = start_station, y = count))+
+geom_col()+
+theme(axis.text = element_text(size = 12)) +
+scale_fill_manual(values = colour_scheme) +
+theme_minimal() +
+labs(title = "\nBike hires by date\n",
+x = "\nTime\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble <- as_tibble(nyc_bikes_df)
+nyc_bikes_tibble %>% group_by(start_station) %>% summarise(count = n()) %>% arrange(desc(count)) %>% head(n = 10) %>%
+ggplot(aes(x = start_station, y = count))+
+geom_col()+
+theme(axis.text = element_text(size = 12)) +
+scale_fill_manual(values = colour_scheme) +
+theme_minimal() +
+labs(title = "\nBike hires by date\n",
+x = "\nTime\n",
+y = "\nCount\n") +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble <- as_tibble(nyc_bikes_df)
+nyc_bikes_tibble %>% group_by(start_station) %>% summarise(count = n()) %>% arrange(desc(count)) %>% head(n = 10) %>%
+ggplot(aes(x = start_station, y = count))+
+geom_col()+
+labs(title = "\nBike hires by date\n",
+x = "\nTime\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+theme(axis.text = element_text(size = 12)) +
+scale_fill_manual(values = colour_scheme) +
+theme_minimal() +
+nyc_bikes_tibble <- as_tibble(nyc_bikes_df)
+nyc_bikes_tibble %>% group_by(start_station) %>% summarise(count = n()) %>% arrange(desc(count)) %>% head(n = 10) %>%
+ggplot(aes(x = start_station, y = count))+
+geom_col()+
+theme(axis.text = element_text(size = 12))+
+scale_fill_manual(values = colour_scheme)+
+theme_minimal()+
+labs(title = "\nBike hires by date\n",
+x = "\nTime\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+library(tidyverse)
+library(tsibbledata)
+library(tsibble)
+library(dplyr)
+library(ggplot2)
+library(sf)
+library(lubridate)
+library(leaflet)
+library(skimr)
+nyc_bikes_df <- nyc_bikes
+colour_scheme <-  c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+nyc_bikes_df <- nyc_bikes_df %>%
+mutate(year = year(start_time),
+month = month(start_time, label = TRUE, abbr = TRUE),
+day = day(start_time, label = TRUE, abbr = TRUE),
+weekday = wday(start_time, label = TRUE, abbr = FALSE))
+nyc_bikes_tibble <- as_tibble(nyc_bikes_df)
+nyc_bikes_tibble %>% group_by(start_station) %>% summarise(count = n()) %>% arrange(desc(count)) %>% head(n = 10) %>%
+ggplot(aes(x = start_station, y = count))+
+geom_col()+
+theme(axis.text = element_text(size = 12))+
+scale_fill_manual(values = colour_scheme)+
+theme_minimal()+
+labs(title = "\nBike hires by date\n",
+x = "\nTime\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble <- as_tibble(nyc_bikes_df)
+nyc_bikes_tibble %>% group_by(start_station) %>% summarise(count = n()) %>% arrange(desc(count)) %>% head(n = 10) %>%
+ggplot(aes(x = start_station, y = count))+
+geom_col()+
+theme(axis.text = element_text(size = 12))+
+scale_fill_manual(values = colour_scheme)+
+theme_minimal()+
+labs(title = "\nTop 10 most popular stations\n",
+x = "\nTime\n",
+y = "\nStation ID\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble <- as_tibble(nyc_bikes_df)
+nyc_bikes_tibble %>% group_by(start_station) %>% summarise(count = n()) %>% arrange(desc(count)) %>% head(n = 10) %>%
+ggplot(aes(x = start_station, y = count))+
+geom_col()+
+theme(axis.text = element_text(size = 12))+
+scale_fill_manual(values = colour_scheme)+
+theme_minimal()+
+labs(title = "\nTop 10 most popular stations\n",
+x = "\nStation ID\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble <- as_tibble(nyc_bikes_df)
+nyc_bikes_tibble %>% group_by(start_station) %>% summarise(count = n()) %>% arrange(desc(count)) %>% head(n = 10) %>%
+ggplot(aes(x = reorder(start_station, -count), y = count))+
+geom_col()+
+theme(axis.text = element_text(size = 12))+
+scale_fill_manual(values = colour_scheme)+
+theme_minimal()+
+labs(title = "\nTop 10 most popular stations\n",
+x = "\nStation ID\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble <- as_tibble(nyc_bikes_df)
+nyc_bikes_tibble %>% group_by(start_station) %>% summarise(count = n()) %>% arrange(desc(count)) %>% head(n = 10) %>%
+ggplot(aes(x = reorder(start_station, -count), y = count), fill = colour_scheme)+
+geom_col()+
+theme(axis.text = element_text(size = 12))+
+scale_fill_manual(values = )+
+theme_minimal()+
+labs(title = "\nTop 10 most popular stations\n",
+x = "\nStation ID\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble <- as_tibble(nyc_bikes_df)
+nyc_bikes_tibble %>% group_by(start_station) %>% summarise(count = n()) %>% arrange(desc(count)) %>% head(n = 10) %>%
+ggplot(aes(x = reorder(start_station, -count), y = count), fill = "#009E73")+
+geom_col()+
+theme(axis.text = element_text(size = 12))+
+scale_fill_manual(values = )+
+theme_minimal()+
+labs(title = "\nTop 10 most popular stations\n",
+x = "\nStation ID\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble <- as_tibble(nyc_bikes_df)
+nyc_bikes_tibble %>% group_by(start_station) %>% summarise(count = n()) %>% arrange(desc(count)) %>% head(n = 10) %>%
+ggplot(aes(x = reorder(start_station, -count), y = count), fill = "#009E73")+
+geom_col()+
+theme(axis.text = element_text(size = 12))+
+theme_minimal()+
+labs(title = "\nTop 10 most popular stations\n",
+x = "\nStation ID\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble <- as_tibble(nyc_bikes_df)
+nyc_bikes_tibble %>% group_by(start_station) %>% summarise(count = n()) %>% arrange(desc(count)) %>% head(n = 10) %>%
+ggplot(aes(x = reorder(start_station, -count), y = count), col = "#009E73")+
+geom_col()+
+theme(axis.text = element_text(size = 12))+
+theme_minimal()+
+labs(title = "\nTop 10 most popular stations\n",
+x = "\nStation ID\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble <- as_tibble(nyc_bikes_df)
+nyc_bikes_tibble %>% group_by(start_station) %>% summarise(count = n()) %>% arrange(desc(count)) %>% head(n = 10) %>%
+ggplot(aes(x = reorder(start_station, -count), y = count))+
+geom_col( col = "#009E73")+
+theme(axis.text = element_text(size = 12))+
+theme_minimal()+
+labs(title = "\nTop 10 most popular stations\n",
+x = "\nStation ID\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble <- as_tibble(nyc_bikes_df)
+nyc_bikes_tibble %>% group_by(start_station) %>% summarise(count = n()) %>% arrange(desc(count)) %>% head(n = 10) %>%
+ggplot(aes(x = reorder(start_station, -count), y = count))+
+geom_col(fill = "#009E73")+
+theme(axis.text = element_text(size = 12))+
+theme_minimal()+
+labs(title = "\nTop 10 most popular stations\n",
+x = "\nStation ID\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble <- as_tibble(nyc_bikes_df)
+nyc_bikes_tibble %>% group_by(start_station) %>% summarise(count = n()) %>% arrange(desc(count)) %>% head(n = 10) %>%
+ggplot(aes(x = reorder(start_station, -count), y = count))+
+geom_col(fill = "#009E73")+
+theme(axis.text = element_text(size = 12))+
+theme_minimal()+
+labs(title = "\nTop 10 most popular start stations\n",
+x = "\nStation ID\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble <- as_tibble(nyc_bikes_df)
+nyc_bikes_tibble %>% group_by(start_station) %>% summarise(count = n()) %>% arrange(desc(count)) %>% head(n = 10) %>%
+ggplot(aes(x = reorder(start_station, -count), y = count))+
+geom_col(fill = "#0072B2")+
+theme(axis.text = element_text(size = 12))+
+theme_minimal()+
+labs(title = "\nTop 10 most popular start stations\n",
+x = "\nStation ID\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble <- as_tibble(nyc_bikes_df)
+nyc_bikes_tibble %>% group_by(start_station) %>% summarise(count = n()) %>% arrange(desc(count)) %>% head(n = 10) %>%
+ggplot(aes(x = reorder(start_station, -count), y = count))+
+geom_col(fill = "#0072B2")+
+theme(axis.text = element_text(size = 12))+
+theme_minimal()+
+labs(title = "\nTop 10 most popular start stations\n",
+x = "\nStation ID\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble <- as_tibble(nyc_bikes_df)
+nyc_bikes_tibble %>% group_by(start_station) %>% summarise(count = n()) %>% arrange(desc(count)) %>% tail(n = 10) %>%
+ggplot(aes(x = reorder(start_station, -count), y = count))+
+geom_col(fill = "#0072B2")+
+theme(axis.text = element_text(size = 12))+
+theme_minimal()+
+labs(title = "\nTop 10 most popular start stations\n",
+x = "\nStation ID\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble %>% group_by(end_station) %>% summarise(count = n()) %>% arrange(desc(count)) %>% tail(n = 10) %>%
+ggplot(aes(x = reorder(end_station, -count), y = count))+
+geom_col(fill = "#0072B2")+
+theme(axis.text = element_text(size = 12))+
+theme_minimal()+
+labs(title = "\nTop 10 least popular start stations\n",
+x = "\nStation ID\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble %>% group_by(end_station) %>% summarise(count = n()) %>% arrange(count) %>% tail(n = 10) %>%
+ggplot(aes(x = reorder(end_station, -count), y = count))+
+geom_col(fill = "#0072B2")+
+theme(axis.text = element_text(size = 12))+
+theme_minimal()+
+labs(title = "\nTop 10 least popular start stations\n",
+x = "\nStation ID\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble <- as_tibble(nyc_bikes_df)
+nyc_bikes_tibble %>% group_by(start_station) %>% summarise(count = n()) %>% arrange(desc(count)) %>% tail(n = 10) %>%
+ggplot(aes(x = reorder(start_station, -count), y = count))+
+geom_col(fill = "#0072B2")+
+theme(axis.text = element_text(size = 12))+
+theme_minimal()+
+labs(title = "\nTop 10 least popular start stations\n",
+x = "\nStation ID\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble %>% group_by(end_station) %>% summarise(count = n()) %>% arrange(count) %>% tail(n = 10) %>%
+ggplot(aes(x = reorder(end_station, -count), y = count))+
+geom_col(fill = "#0072B2")+
+theme(axis.text = element_text(size = 12))+
+theme_minimal()+
+labs(title = "\nTop 10 least popular end stations\n",
+x = "\nStation ID\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble %>% group_by(end_station) %>% summarise(count = n()) %>% arrange(count) %>% head(n = 10) %>%
+ggplot(aes(x = reorder(end_station, -count), y = count))+
+geom_col(fill = "#0072B2")+
+theme(axis.text = element_text(size = 12))+
+theme_minimal()+
+labs(title = "\nTop 10 least popular end stations\n",
+x = "\nStation ID\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble %>% group_by(end_station) %>% summarise(count = n()) %>% arrange(count) %>% head(n = 10) %>%
+ggplot(aes(x = reorder(end_station, -count), y = count, group = gender))+
+geom_col(fill = "#0072B2")+
+theme(axis.text = element_text(size = 12))+
+theme_minimal()+
+labs(title = "\nTop 10 least popular end stations\n",
+x = "\nStation ID\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble %>% group_by(end_station) %>% summarise(count = n()) %>% arrange(count) %>% head(n = 10) %>%
+ggplot(aes(x = reorder(end_station, -count), y = count, fill = gender))+
+geom_col(fill = "#0072B2")+
+theme(axis.text = element_text(size = 12))+
+theme_minimal()+
+labs(title = "\nTop 10 least popular end stations\n",
+x = "\nStation ID\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble %>% group_by(end_station) %>% summarise(count = n()) %>% arrange(count) %>% head(n = 10) %>%
+ggplot(aes(x = reorder(end_station, -count), y = count, fill = gender))+
+geom_col()+
+theme(axis.text = element_text(size = 12))+
+theme_minimal()+
+labs(title = "\nTop 10 least popular end stations\n",
+x = "\nStation ID\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble %>% group_by(end_station) %>% summarise(count = n()) %>% arrange(count) %>% head(n = 10) %>%
+ggplot(aes(x = reorder(end_station, -count), y = count))+
+geom_col(fill = "#0072B2")+
+theme(axis.text = element_text(size = 12))+
+theme_minimal()+
+labs(title = "\nTop 10 least popular end stations\n",
+x = "\nStation ID\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble %>% group_by(end_station, start_station) %>% summarise(count = n()) %>% arrange(count) %>% head(n = 10) %>%
+ggplot(aes(x = reorder(end_station, -count), y = count))+
+geom_col(fill = "#0072B2")+
+theme(axis.text = element_text(size = 12))+
+theme_minimal()+
+labs(title = "\nTop 10 least popular end stations\n",
+x = "\nStation ID\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_tibble %>% group_by(end_station) %>% summarise(count = n()) %>% arrange(count) %>% head(n = 10) %>%
+ggplot(aes(x = reorder(end_station, -count), y = count))+
+geom_col(fill = "#0072B2")+
+theme(axis.text = element_text(size = 12))+
+theme_minimal()+
+labs(title = "\nTop 10 least popular end stations\n",
+x = "\nStation ID\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_df %>% index_by(month) %>% summarise(count = n()) %>%
+ggplot(aes(x = month, y = count))+
+geom_point(size = 3)+
+theme(axis.text = element_text(size = 12)) +
+scale_fill_manual(values = colour_scheme) +
+theme_minimal() +
+labs(title = "\nBike Hires by Month\n",
+x = "\nMonth\n",
+y = "\nCount\n") +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+nyc_bikes_df %>% index_by(month) %>% summarise(count = n()) %>%
+ggplot(aes(x = month, y = count))+
+geom_point(size = 3)+
+theme(axis.text = element_text(size = 12)) +
+scale_fill_manual(values = colour_scheme) +
+theme_minimal() +
+labs(title = "\nBike Hires by Month\n",
+x = "\nMonth\n",
+y = "\nCount\n") +
+guides(fill = FALSE) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1))
+View(nyc_bikes_df)
+nyc_bikes_df %>%
+ggplot()+
+geom_bar(aes(x = month, fill = type))+
+theme(axis.text = element_text(size = 12))+
+scale_fill_manual(values = colour_scheme)+
+theme_minimal()+
+labs(
+title = "\nService use by month and type\n",
+x = "\nDay of the week\n",
+y = "\nCount\n"
+)

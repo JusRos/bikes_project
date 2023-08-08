@@ -1,0 +1,5 @@
+"0","```r
+ggplot(nz_census2013, aes(fill = Pop))+
+  geom_sf()+
+  scale_fill_continuous(labels = scales::label_comma())
+```"

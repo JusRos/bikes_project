@@ -1,0 +1,15 @@
+"0","```r
+
+ggplot(competitors)+
+  geom_area(aes(x = year , y = revenue, colour = company))+
+  scale_y_continuous(labels = scales::comma)+
+  labs(
+    x = \"\n\nYear\", 
+    y = \"\n\nRevenue\",
+    colour = \"\n\nCompany\", 
+    title = \"\n\nAnnual Sales of Personal Fitness Trackers\"
+  )+
+  theme(axis.text = element_text(size = 10))+
+  scale_colour_manual(values = col_scheme)+
+  theme_minimal()
+```"

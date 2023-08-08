@@ -1,0 +1,7 @@
+"0","qb_device_data <- "
+"0","mutate(qb_device_data, decimal_hour = hours + (mins/60))"
+"0",""
+"0","ggplot(qb_device_data) +"
+"0","  aes(x = decimal_hour, y = counts) +"
+"0","  geom_line() + "
+"0","  facet_grid(id ~ device)"

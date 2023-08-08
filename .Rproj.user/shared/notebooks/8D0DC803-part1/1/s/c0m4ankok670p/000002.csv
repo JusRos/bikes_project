@@ -1,0 +1,4 @@
+"0","```r
+world <- ne_countries(scale = \"medium\", returnclass = \"sf\")
+world
+```"

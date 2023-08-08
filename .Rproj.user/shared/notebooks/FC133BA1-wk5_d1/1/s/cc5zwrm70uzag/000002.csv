@@ -1,0 +1,14 @@
+"0","```r
+cost_2019 <- monthly_sales %>% 
+  filter(cashflow == \"Cost\" | cashflow  == \"Total Revenue\", str_sub(date, start = 1, end = 4) == 2019)
+
+ggplot(cost_2019, aes(x = date, y = amount, group = cashflow, colour = cashflow))+
+  geom_line() +
+  labs(x = \"\nDate\",
+  y = \"\n\nAmount\", 
+  title = \"\n\nMonthly revenue and cost for 2019\", element_text(size = 28),
+  fill = \"Cashflow\")+
+  theme(axis.text = element_text(size = 10))+
+  scale_colour_manual(values = col_scheme)+
+  theme_minimal()
+```"

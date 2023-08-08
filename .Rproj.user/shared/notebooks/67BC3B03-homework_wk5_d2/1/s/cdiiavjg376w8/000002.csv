@@ -1,0 +1,5 @@
+"0","```r
+ggplot(backpack)+
+  aes(x = factor(back_problems), fill = sex)+
+     geom_bar()
+```"

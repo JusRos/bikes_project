@@ -1,0 +1,7 @@
+"0","library(ggplot2)"
+"0","library(CodeClanData)"
+"0","library(dplyr)"
+"0",""
+"0","ggplot(qb_revenue_breakdown) +"
+"0","  aes(x = Year, y = Revenue, fill = Product) +"
+"0","  geom_col() "

@@ -1,0 +1,9 @@
+"0","```r
+backpack1 %>% 
+ggplot(aes(x = back_problems, y = after_stat(prop), group = 1)) +
+  geom_bar() +    
+  xlab(\"Back issues among students\") +
+  ylab(\"Percentage\") +
+  ggtitle(\"Percentage students with back issues\") +
+  scale_y_continuous(labels = scales::percent_format())
+```"

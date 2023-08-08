@@ -1,0 +1,19 @@
+"0","```r
+
+ ggplot(backpack)+
+  aes(x = body_weight, y = backpack_weight)+
+  geom_point()+
+ geom_smooth(method = \"lm\", se = FALSE, color = \"blue\")+
+  labs(
+    title = \"\nRelationship bewteen body and backpack weight\n\",
+    x = \"\nBody Weight\n\",
+    y = \"\nBackpack Weight\n\"
+  )+
+   theme(text = element_text(size = 12),
+    title = element_text(size = 14),
+        axis.text = element_text(size = 10),
+    panel.background = element_rect(fill = \"white\"),
+    panel.grid = element_line(colour = \"grey90\", linetype = \"dotted\")
+    
+  )
+```"

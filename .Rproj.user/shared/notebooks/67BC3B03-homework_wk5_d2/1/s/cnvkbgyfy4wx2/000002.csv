@@ -1,0 +1,7 @@
+"0","```r
+ggplot(backpack)+
+  aes( x = body_weight, y = backpack_weight, group = back_problems, col = sex )+
+  geom_point()+
+  geom_smooth(method = \"lm\",se = FALSE, color = \"red\")+
+  facet_grid(~back_problems~sex)
+```"

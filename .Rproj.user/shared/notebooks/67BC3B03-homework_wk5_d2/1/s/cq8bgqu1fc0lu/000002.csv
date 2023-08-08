@@ -1,0 +1,8 @@
+"0","```r
+ggplot(backpack)+
+  aes(x = body_weight, fill = sex)+
+  geom_bar()+
+   geom_smooth(method = \"lm\", se = FALSE)
++
+facet_wrap(~sex)
+```"

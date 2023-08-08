@@ -1,0 +1,31 @@
+"0","```r
+library(rnaturalearth)
+library(rnaturalearthdata)
+```"
+"1","Warning: package ‘rnaturalearthdata’ was built under R version 4.2.3
+Attaching package: ‘rnaturalearthdata’
+
+The following object is masked from ‘package:rnaturalearth’:
+
+    countries110
+"
+"0","```r
+library(rgeos)
+```"
+"1","Warning: package ‘rgeos’ was built under R version 4.2.3Loading required package: sp
+Warning: package ‘sp’ was built under R version 4.2.3rgeos version: 0.6-3, (SVN revision 696)
+ GEOS runtime version: 3.9.3-CAPI-1.14.3 
+ Please note that rgeos will be retired during October 2023,
+plan transition to sf or terra functions using GEOS at your earliest convenience.
+See https://r-spatial.org/r/2023/05/15/evolution4.html for details.
+ GEOS using OverlayNG
+ Linking to sp version: 2.0-0 
+ Polygon checking: TRUE 
+
+
+Attaching package: ‘rgeos’
+
+The following object is masked from ‘package:dplyr’:
+
+    symdiff
+"

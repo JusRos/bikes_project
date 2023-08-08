@@ -1,0 +1,8 @@
+"0","leaflet(water_data_df_clean) %>% "
+"0","          addTiles() %>% "
+"0","  addCircleMarkers(lng = ~location.longitude, # it is possible to use different markers shapes"
+"0","                   lat = ~ location.latitude,"
+"0","                   radius = ~ type, weight = 1)"
+"2","Error in structure(list(options = options), leafletData = data) : 
+  object 'water_data_df_clean' not found
+"

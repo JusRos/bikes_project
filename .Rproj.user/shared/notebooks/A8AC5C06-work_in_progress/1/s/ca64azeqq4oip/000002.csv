@@ -1,0 +1,21 @@
+"0","```r
+colnames(game_sales)
+```"
+"1"," [1] \"name\"            \"genre\"           \"year_of_release\" \"publisher\"       \"sales\"          
+ [6] \"critic_score\"    \"user_score\"      \"developer\"       \"rating\"          \"platform\"       
+"
+"0","```r
+skimr::skim(game_sales)
+```"
+"1","── Data Summary ────────────────────────
+                           Values    
+Name                       game_sales
+Number of rows             1823      
+Number of columns          10        
+_______________________              
+Column type frequency:               
+  character                6         
+  numeric                  4         
+________________________             
+Group variables            None      
+"

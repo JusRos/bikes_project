@@ -1,0 +1,17 @@
+"0","```r
+nz_geometry <- st_geometry(nz_census2013)
+nz_geometry
+```"
+"1","Geometry set for 16 features 
+Geometry type: MULTIPOLYGON
+Dimension:     XY
+Bounding box:  xmin: 1090144 ymin: 4748537 xmax: 2089533 ymax: 6191874
+Projected CRS: NZGD2000 / New Zealand Transverse Mercator 2000
+First 5 geometries:
+"
+"1","MULTIPOLYGON (((1745493 6001802, 1740539 599506...
+MULTIPOLYGON (((1803822 5900006, 1791443 590057...
+MULTIPOLYGON (((1860345 5859665, 1857808 585392...
+MULTIPOLYGON (((2049387 5832785, 2051016 582642...
+MULTIPOLYGON (((2024489 5674920, 2019037 567733...
+"

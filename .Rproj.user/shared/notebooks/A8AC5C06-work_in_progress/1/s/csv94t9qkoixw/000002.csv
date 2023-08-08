@@ -1,0 +1,6 @@
+"0","```r
+game_sales %>% filter(publisher == \"Nintendo\") %>% filter(year_of_release == 2011) %>% 
+  ggplot()+
+  aes(x = factor(year_of_release), fill = platform) +
+  geom_bar(position = \"dodge\")
+```"

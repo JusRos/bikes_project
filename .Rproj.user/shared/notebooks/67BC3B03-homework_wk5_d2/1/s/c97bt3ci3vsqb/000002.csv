@@ -1,0 +1,18 @@
+"0","```r
+ggplot(backpack)+
+  aes(x = sex, y = backpack_weight)+
+  geom_dotplot(binaxis = \"y\", stackdir = \"center\")+
+  scale_y_continuous(breaks = c(2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36))+
+  labs(
+    title = \"\nBackpack weight by gender\n\",
+    x = \"\nGender\n\",
+    y = \"\n Weight\n\"
+    )+
+  theme(text = element_text(size = 12),
+    title = element_text(size = 14),
+        axis.text = element_text(size = 10),
+    panel.background = element_rect(fill = \"white\"),
+    panel.grid = element_line(colour = \"grey90\", linetype = \"dotted\")
+    
+  )
+```"

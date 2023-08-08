@@ -1,0 +1,4 @@
+"0","options(scipen = 999)"
+"0","ggplot(qb_competitors) +"
+"0","  aes(x = Year, y = Revenue, fill = Company) +"
+"0","  geom_area()"

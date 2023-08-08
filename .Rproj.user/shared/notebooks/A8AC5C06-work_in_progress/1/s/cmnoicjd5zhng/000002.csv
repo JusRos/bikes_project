@@ -1,0 +1,6 @@
+"0","```r
+library(tidyverse)
+
+game_sales <- CodeClanData::game_sales
+head(game_sales)
+```"

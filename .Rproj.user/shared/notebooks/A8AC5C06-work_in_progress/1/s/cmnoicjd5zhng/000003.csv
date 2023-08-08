@@ -1,0 +1,10 @@
+"0","```r
+platform <- game_sales %>% filter(publisher == \"Nintendo\") %>% mutate(platform = recode( \"GC\" = \"Game Cube\", \"GBA\"= \"Game Boy Advance\", \"XB\" = \"XBox\", platform)) %>% distinct(platform_long) %>% arrange(platform_long) %>%  pull()
+```"
+"1","Error in `distinct()`:
+! Must use existing variables.
+✖ `platform_long` not found in `.data`.
+Backtrace:
+ 1. ... %>% pull()
+ 5. dplyr:::distinct.data.frame(., platform_long)
+"

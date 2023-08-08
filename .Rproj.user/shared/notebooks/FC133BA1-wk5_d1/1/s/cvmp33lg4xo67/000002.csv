@@ -1,0 +1,12 @@
+"0","```r
+# assign all files to an object
+revenue_breakdown <- qb_revenue_breakdown
+monthly_sales <- qb_monthly_sales
+competitors <- qb_competitors
+device_data <- qb_device_data
+
+revenue_breakdown <- clean_names(qb_revenue_breakdown)
+monthly_sales <- clean_names(qb_monthly_sales)
+competitors <- clean_names(qb_competitors)
+device_data <- clean_names(qb_device_data)
+```"

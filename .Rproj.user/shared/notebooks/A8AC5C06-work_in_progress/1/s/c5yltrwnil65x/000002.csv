@@ -1,0 +1,20 @@
+"0","```r
+
+game_sales %>% filter(publisher == game_publisher) %>%
+        filter(year_of_release == year_input) %>% 
+        ggplot(aes(x = factor(year_of_release), fill = platform))+
+        geom_bar(position = \"dodge\", show.legend = TRUE)+
+        labs(
+          x = \"\nYear of release\n\",
+          y = \"\nCount\n\"
+        ) + 
+       theme(axis.text = element_text(size = 8, face = \"plain\"))
+```"
+"1","Warning: There was 1 warning in `filter()`.
+ℹ In argument: `publisher == game_publisher`.
+Caused by warning in `publisher == game_publisher`:
+! longer object length is not a multiple of shorter object lengthWarning: There was 1 warning in `filter()`.
+ℹ In argument: `year_of_release == year_input`.
+Caused by warning in `year_of_release == year_input`:
+! longer object length is not a multiple of shorter object length
+"

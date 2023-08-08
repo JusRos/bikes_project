@@ -1,0 +1,15 @@
+"0","```r
+ggplot(competitors)+
+  geom_line(aes(x = year , y = revenue, colour = company))+
+  scale_y_continuous(labels = scales::comma)+
+  geom_point(aes(x = year , y = revenue, colour = company))+
+  labs(
+    x = \"\n\nRevenue\",
+    y = \"\n\nYear\",
+    colour = \"\n\nCompany\", 
+    title = \"\n\nCompetitors revenue in the past 5 years\"
+  )+
+  theme(axis.text = element_text(size = 10))+
+  scale_colour_manual(values = col_scheme)+
+  theme_minimal()
+```"

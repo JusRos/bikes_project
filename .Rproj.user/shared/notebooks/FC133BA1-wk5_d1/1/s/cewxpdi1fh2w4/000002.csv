@@ -1,0 +1,14 @@
+"0","```r
+kwik_bit_sales_2019 <- monthly_sales %>% 
+  filter(cashflow == \"Kwikbit Unit 1 Sales\", str_sub(date, start = 1, end = 4) == 2019)
+
+ggplot(kwik_bit_sales_2019, aes(x = date, y = amount))+
+  geom_line(colour = \"#BD7040\")+
+  labs(
+    x = \"\nDate\",
+    y = \"\n\nAmount\", 
+    title = \"\n\n\n Monthly Sales of KwikBit Unit 1\", element_text(size = 28))+
+  theme(axis.text = element_text(size = 10))+
+  scale_colour_manual(values = col_scheme)+
+  theme_minimal()
+```"

@@ -1,0 +1,12 @@
+"0","```r
+# filtered by HBName and SIMD level
+simd %>% filter(HBName == \"NHS Ayrshire and Arran\" & SIMD == 1) %>% 
+  ggplot(aes(x = Quarter, y = AverageLengthOfStay, group = AdmissionType, colour = AdmissionType)) +
+  geom_point()+
+  geom_line(size = 1)+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))+
+  labs(
+    title = \"\nAverage length of hospital stay by Admission Type\n\",
+    x = \"\nQuarter\n\",
+    y = \"\nAverage length of stay (days)\n\")
+```"

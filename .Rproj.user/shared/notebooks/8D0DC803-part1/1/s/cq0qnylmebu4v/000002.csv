@@ -1,0 +1,14 @@
+"0","```r
+
+nz_census2013 <- st_read(dsn = \"data/new_zealand_census2013/\", 
+                         layer = \"nz_census2013\")
+```"
+"1","Reading layer `nz_census2013' from data source 
+  `C:\Users\justy\OneDrive\Desktop\DE21\codeclan_work\week_7\day_2\data\new_zealand_census2013' 
+  using driver `ESRI Shapefile'
+Simple feature collection with 16 features and 7 fields
+Geometry type: MULTIPOLYGON
+Dimension:     XY
+Bounding box:  xmin: 1090144 ymin: 4748537 xmax: 2089533 ymax: 6191874
+Projected CRS: NZGD2000 / New Zealand Transverse Mercator 2000
+"
