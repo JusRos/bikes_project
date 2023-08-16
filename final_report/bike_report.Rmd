@@ -1,10 +1,10 @@
 ---
 title: "Citi Bike NYC"
 output:
-  pdf_document: default
-  html_notebook: default
   html_document:
     df_print: paged
+  html_notebook: default
+  pdf_document: default
 code_folding: hide
 ---
 
@@ -41,9 +41,7 @@ In the report I am hoping to find the answer to the following questions:
 
 **Business processes and data flow (1.3)**
  
- ![](final_report/flow_graph.png)
-
-
+ ![](images/flow_graph.png) 
 **Data types (1.5)**
 
 The Bike data is a tsibble including 12 columns and 4268 rows. The tsibble includes the following data types:

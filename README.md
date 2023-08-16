@@ -1,14 +1,11 @@
 ---
 title: "NYC Bikes"
 author: "J.Rosiak"
-date: "2023-08-16"
+date: "2023-07-06"
 output: html_document
 ---
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
-NYC Bikes project
+
 
 ## 1. General Information
 **Domain knowledge**
@@ -35,7 +32,7 @@ In the report I am hoping to find the answer to the following questions:
 
 - Do bike hire patterns differ between bike rider demographics? (e.g. gender, type of user, age)
 
-![](final_report/flow_graph.png)
+![](images/flow_graph.png)
 
 
 **Data types**
